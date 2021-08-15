@@ -1,34 +1,39 @@
-import cv2
-import pyautogui
-
 import config
 
 
+def set_limit():
+    # เปลี่ยนสถานะเป็นรอ
+    config.HOLD = True
+    try:
+        config.LIMIT = int(
+            input("\n[Unlimit is -1]\nEnter number of limit: ") or "-1")
+    except ValueError:
+        print("Invalid number, set to unlimit.")
+        config.LIMIT = -1
+    # เริ่มนับใหม่
+    config.COUNT = 0
+
+
 def set_cooldown():
-    # ปิดจอแสดงผล
-    cv2.destroyAllWindows()
     # เปลี่ยนสถานะเป็นรอ
     config.HOLD = True
     try:
         config.COOLDOWN = int(
-            input("\nNumber of cooldown harvest\n(default = 3): ") or "3")
+            input("\n[default is 3]\nEnter number of cooldown: ") or "3")
     except ValueError:
-        print("Invalid number, set to unlimit.")
+        print("Invalid number, set to 3 seconds.")
         config.COOLDOWN = 3
     # เริ่มนับใหม่
     config.COUNT = 0
-    print("[SYSTEM] Running...\n")
 
 
-def action_click():
-    print("[EVENT] Mouse left click!")
-    config.LAST_CLICK_TIME = config.CURRENT_TIME
-    pyautogui.click(config.CENTER_X, config.CENTER_Y)
+def mouse_left_click(x, y):
+    pyautogui.click(x, y)
 
 
 def harvest():
     print('Gotcha!')
-    action_click()
+    mouse_left_click()
     config.COUNT += 1
     if config.LOOP > 0:
         config.LOOP -= 1
