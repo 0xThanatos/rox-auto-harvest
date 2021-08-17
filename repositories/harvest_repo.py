@@ -31,6 +31,7 @@ def set_cooldown():
     print("[SYSTEM]: Set cooldown to " + str(config.COOLDOWN))
     config.HOLD = False
     config.COUNT = 0
+    config.COOLDOWN += 2 # Delay between times
 
 
 def harvest():
