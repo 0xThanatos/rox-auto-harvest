@@ -6,6 +6,7 @@ Ragnarok X Next Generation - Auto Harvest by OpenCV-Python
 ### Credit: Thanapat Maliphan
 Facebook: www.facebook.com/thanatos1995
 
+### วิธีการติดตั้ง
 1. ติดตั้งโปรแกรม Tesseract เพื่อให้โปรแกรมใช้สำหรับอ่านโจทย์
 2. ดาวน์โหลดที่ `https://github.com/UB-Mannheim/tesseract/wiki`
 3. ขั้นตอนการติดตั้ง กด Next อย่างเดียว
