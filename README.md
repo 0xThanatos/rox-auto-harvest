@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/5137066/129651827-27d701d4-68c7-4858-8669-bf646a91748d.png)
+
 # rox-auto-harvest
 Ragnarok X Next Generation - Auto Harvest by OpenCV-Python
 
